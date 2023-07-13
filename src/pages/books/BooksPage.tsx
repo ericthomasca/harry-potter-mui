@@ -7,12 +7,11 @@ export default function BooksPage() {
       sx={{
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
         height: "75vh",
       }}
     >
-      <Typography variant='h1' justifyContent='center' align='center'>
-        Books Page Component
+      <Typography marginTop={3} variant='h3' align='center'>
+        Books
       </Typography>
     </Box>
   );

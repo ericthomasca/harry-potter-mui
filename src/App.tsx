@@ -8,12 +8,12 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import HomePage from "./pages/HomePage";
-import BooksPage from "./pages/BooksPage";
-import CharactersPage from "./pages/CharactersPage";
-import MoviesPage from "./pages/MoviesPage";
-import SpellsPage from "./pages/SpellsPage";
-import PotionsPage from "./pages/PotionsPage";
+import HomePage from "./pages/home/HomePage";
+import BooksPage from "./pages/books/BooksPage";
+import CharactersPage from "./pages/characters/CharactersPage";
+import MoviesPage from "./pages/movies/MoviesPage";
+import SpellsPage from "./pages/spells/SpellsPage";
+import PotionsPage from "./pages/potions/PotionsPage";
 
 const theme = createTheme({
   palette: {
