@@ -2,15 +2,23 @@ import ListItemButton from "@mui/material/ListItemButton";
 import List from "@mui/material/List";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from "@mui/material/ListItemIcon";
+
 import BookIcon from "@mui/icons-material/Book";
 import PeopleIcon from "@mui/icons-material/People";
 import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
 import LiquorIcon from "@mui/icons-material/Liquor";
 import MovieIcon from "@mui/icons-material/Movie";
+import HomeIcon from "@mui/icons-material/Home";
 
 export default function DrawerList() {
   return (
     <List>
+      <ListItemButton href='/' divider>
+        <ListItemIcon>
+          <HomeIcon />
+        </ListItemIcon>
+        <ListItemText primary='Home' />
+      </ListItemButton>
       <ListItemButton href='/books'>
         <ListItemIcon>
           <BookIcon />

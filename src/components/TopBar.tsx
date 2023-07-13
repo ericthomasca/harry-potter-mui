@@ -34,7 +34,7 @@ export default function TopBar() {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Drawer anchor='left' open={isDrawerOpen} onClose={toggleDrawer}>
+      <Drawer anchor='left' open={isDrawerOpen} onClose={toggleDrawer} >
         <DrawerList />
       </Drawer>
     </>
