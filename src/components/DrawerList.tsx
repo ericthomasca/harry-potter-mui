@@ -14,40 +14,58 @@ export default function DrawerList() {
   return (
     <List>
       <ListItemButton href='/' divider>
-        <ListItemIcon>
+        <ListItemIcon sx={{ color: "#FFF" }}>
           <HomeIcon />
         </ListItemIcon>
-        <ListItemText primary='Home' />
+        <ListItemText
+          primary='Home'
+          primaryTypographyProps={{ color: "#FFF" }}
+        />
       </ListItemButton>
       <ListItemButton href='/books'>
-        <ListItemIcon>
+        <ListItemIcon sx={{ color: "#FFF" }}>
           <BookIcon />
         </ListItemIcon>
-        <ListItemText primary='Books' />
+        <ListItemText
+          primary='Books'
+          primaryTypographyProps={{ color: "#FFF" }}
+        />
       </ListItemButton>
       <ListItemButton href='/characters'>
-        <ListItemIcon>
+        <ListItemIcon sx={{ color: "#FFF" }}>
           <PeopleIcon />
         </ListItemIcon>
-        <ListItemText primary='Characters' />
+        <ListItemText
+          primary='Characters'
+          primaryTypographyProps={{ color: "#FFF" }}
+        />
       </ListItemButton>
       <ListItemButton href='/movies'>
-        <ListItemIcon>
+        <ListItemIcon sx={{ color: "#FFF" }}>
           <MovieIcon />
         </ListItemIcon>
-        <ListItemText primary='Movies' />
+        <ListItemText
+          primary='Movies'
+          primaryTypographyProps={{ color: "#FFF" }}
+        />
       </ListItemButton>
       <ListItemButton href='/spells'>
-        <ListItemIcon>
+        <ListItemIcon sx={{ color: "#FFF" }}>
           <LiquorIcon />
         </ListItemIcon>
-        <ListItemText primary='Spells' />
+        <ListItemText
+          primary='Spells'
+          primaryTypographyProps={{ color: "#FFF" }}
+        />
       </ListItemButton>
       <ListItemButton href='/potions'>
-        <ListItemIcon>
+        <ListItemIcon sx={{ color: "#FFF" }}>
           <AutoFixHighIcon />
         </ListItemIcon>
-        <ListItemText primary='Potions' />
+        <ListItemText
+          primary='Potions'
+          primaryTypographyProps={{ color: "#FFF" }}
+        />
       </ListItemButton>
     </List>
   );
