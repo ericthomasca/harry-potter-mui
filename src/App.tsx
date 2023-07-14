@@ -1,30 +1,32 @@
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import TopBar from "./components/TopBar";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+
+import TopBar from "./components/TopBar";
 import HomePage from "./pages/home/HomePage";
 import BooksPage from "./pages/books/BooksPage";
 import CharactersPage from "./pages/characters/CharactersPage";
 import MoviesPage from "./pages/movies/MoviesPage";
 import SpellsPage from "./pages/spells/SpellsPage";
 import PotionsPage from "./pages/potions/PotionsPage";
+import BookPage from "./pages/books/BookPage";
+
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#222f5b", // Ravenclaw Blue
+      main: "#222f5b",
     },
     secondary: {
-      main: "#CDA374", // Ravenclaw Bronze
+      main: "#CDA374",
     },
     background: {
-      // default: "#5d5d5d", // TODO enable later
+      default: "#0e1a40",
       paper: "#946b2d",
     },
   },
@@ -43,8 +45,12 @@ const router = createBrowserRouter([
     element: <BooksPage />,
   },
   {
+    path: "/books/:id",
+    element: <BookPage />,
+  },
+  {
     path: "/characters",
-    element: <CharactersPage />
+    element: <CharactersPage />,
   },
   {
     path: "/movies",
