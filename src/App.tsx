@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -50,6 +50,10 @@ const router = createBrowserRouter([
   },
   {
     path: "/characters",
+    element: <Navigate to="/characters/1" /> 
+  },
+  {
+    path: "/characters/:page",
     element: <CharactersPage />,
   },
   {
