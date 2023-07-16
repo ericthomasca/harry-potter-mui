@@ -17,7 +17,7 @@ export default function CharactersPage() {
   const { page } = useParams<{ page: string }>();
   const navigate = useNavigate();
 
-  let pageSize = 20;
+  let pageSize = 10;
   let cardWidthRatio = 0.7;
 
   useEffect(() => {
