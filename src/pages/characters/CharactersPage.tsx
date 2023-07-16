@@ -27,7 +27,6 @@ export default function CharactersPage() {
   useEffect(() => {
     window.scrollTo(0, 0); // jump to top of screen on load
 
-
     const fetchData = async () => {
       try {
         const response = await axios.get(
@@ -58,16 +57,12 @@ export default function CharactersPage() {
 
   const handlePreviousPage = () => {
     const currentPage = parseInt(page ?? "1");
-    if (!isNaN(currentPage) && currentPage > 1) {
-      navigate(`/characters/${currentPage - 1}`);
-    }
+    navigate(`/characters/${currentPage - 1}`);
   };
 
   const handleNextPage = () => {
     const currentPage = parseInt(page ?? "1");
-    if (!isNaN(currentPage) && currentPage > 1) {
-      navigate(`/characters/${currentPage + 1}`);
-    }
+    navigate(`/characters/${currentPage + 1}`);
   };
 
   return (
