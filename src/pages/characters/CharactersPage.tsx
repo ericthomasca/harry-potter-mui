@@ -10,6 +10,10 @@ import Link from "@mui/material/Link";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
 export default function CharactersPage() {
   const [characters, setCharacters] = useState<Character[]>([]);
@@ -21,6 +25,9 @@ export default function CharactersPage() {
   let cardWidthRatio = 0.7;
 
   useEffect(() => {
+    window.scrollTo(0, 0); // jump to top of screen on load
+
+
     const fetchData = async () => {
       try {
         const response = await axios.get(
@@ -64,10 +71,32 @@ export default function CharactersPage() {
   };
 
   return (
-    <Box display='flex' flexDirection='column' alignItems='center' p={2}>
-      <Typography variant='h3' align='center' color='#FFFFFF' mb={3}>
-        Harry Potter Characters
+    <Box display='flex' flexDirection='column' alignItems='center' padding={2}>
+      <Typography variant='h3' align='center' color='#FFFFFF' marginBottom={2}>
+        Characters
       </Typography>
+      <Box display='flex' justifyContent='center'>
+        <Box margin={2}>
+          <Button
+            startIcon={<ArrowLeftIcon />}
+            variant='contained'
+            onClick={handlePreviousPage}
+            disabled={!page || page === "1"}
+          >
+            Prev
+          </Button>
+        </Box>
+        <Box margin={2}>
+          <Button
+            endIcon={<ArrowRightIcon />}
+            variant='contained'
+            onClick={handleNextPage}
+            disabled={!page || characters.length < pageSize}
+          >
+            Next
+          </Button>
+        </Box>
+      </Box>
       <List sx={{ width: "65%" }}>
         {characters.map((character) => (
           <ListItem key={character.id} sx={{ marginBottom: 2 }}>
@@ -225,15 +254,26 @@ export default function CharactersPage() {
         ))}
       </List>
       <Box display='flex' justifyContent='center' mt={3}>
-        <button onClick={handlePreviousPage} disabled={!page || page === "1"}>
-          Previous Page
-        </button>
-        <button
-          onClick={handleNextPage}
-          disabled={characters.length < pageSize || !page}
-        >
-          Next Page
-        </button>
+        <Box margin={2}>
+          <Button
+            startIcon={<ArrowLeftIcon />}
+            variant='contained'
+            onClick={handlePreviousPage}
+            disabled={!page || page === "1"}
+          >
+            Prev
+          </Button>
+        </Box>
+        <Box margin={2}>
+          <Button
+            endIcon={<ArrowRightIcon />}
+            variant='contained'
+            onClick={handleNextPage}
+            disabled={!page || characters.length < pageSize}
+          >
+            Next
+          </Button>
+        </Box>
       </Box>
     </Box>
   );
